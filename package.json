@@ -34,7 +34,6 @@
     "pg-hstore": "^2.3.3",
     "puppeteer": "^2.0.0",
     "redis": "^2.8.0",
-    "robotjs": "^0.5.1",
     "sequelize": "^5.16.0",
     "telegraf": "^3.36.0",
     "wait": "^0.1.0",
