@@ -16,16 +16,13 @@ import authMiddleware from './app/middlewares/auth';
 
 import multerConfig from './config/multer';
 
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200,
+};
+
 const routes = new Router();
-routes.use(cors());
-routes.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  next();
-});
+routes.use(cors(corsOptions));
 const upload = multer(multerConfig);
 
 // SESSION
