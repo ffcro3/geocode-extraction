@@ -4,11 +4,12 @@ import Youch from 'youch';
 import mongoose from 'mongoose';
 import routes from './routes';
 import 'express-async-errors';
+import cors from 'cors';
 
 class App {
   constructor() {
     this.server = express();
-
+    this.server.use(cors());
     this.middlewares();
     this.routes();
     mongoose.connect(
