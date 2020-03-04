@@ -19,11 +19,16 @@ module.exports = {
     const allowedMimes = [
       'application/vnd.ms-excel',
       'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+      'application/wps-office.xlsx',
     ];
     if (allowedMimes.includes(file.mimetype)) {
       cb(null, true);
     } else {
-      cb(new Error('Invalid file type'));
+      cb(
+        new Error(
+          'Tipo de arquivo não suportado. Adcione um arquivo de Excel para continuar'
+        )
+      );
     }
   },
 };

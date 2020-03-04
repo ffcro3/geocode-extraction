@@ -16,13 +16,8 @@ import authMiddleware from './app/middlewares/auth';
 
 import multerConfig from './config/multer';
 
-const corsOptions = {
-  origin: '*',
-  optionsSuccessStatus: 200,
-};
-
 const routes = new Router();
-routes.use(cors(corsOptions));
+routes.use(cors());
 const upload = multer(multerConfig);
 
 // SESSION
@@ -50,6 +45,8 @@ routes.get('/count', geoCodeController.countPages);
 // USER
 
 routes.get('/users', UserController.show);
-routes.get('/users/:id', UserController.show);
+routes.delete('/users/:id', UserController.delete);
+routes.get('/users/pages', UserController.countPages);
+routes.put('/users/edit/:id', UserController.editUser);
 
 export default routes;
