@@ -21,7 +21,7 @@
     "express-handlebars": "^3.1.0",
     "glob": "^7.1.6",
     "ibm-watson": "^5.2.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongo-xlsx": "^1.0.12",
     "mongoose": "^5.7.12",
     "move-file": "^1.2.0",
